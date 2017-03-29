@@ -1,0 +1,28 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "quotes": [1, "single"],
+    "strict": [2, "never"],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "padded-blocks": 0,
+    "no-use-before-define": [2, "nofunc"],
+    "no-unused-expressions": 0,
+    "no-param-reassign": 0,
+    "no-reserved-keys": 0,
+    "space-infix-ops": 0
+  },
+  "plugins": [
+    "react"
+  ]
+}

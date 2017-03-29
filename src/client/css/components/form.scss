@@ -1,0 +1,10 @@
+.form-field {
+    &-label {
+        font-size: 14px;
+        margin-bottom: $base-offset / 2;
+    }
+    &-error {
+        font-size: 12px;
+        color: $red;
+    }
+}

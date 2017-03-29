@@ -1,0 +1,19 @@
+{
+  "presets": [
+    "es2015",
+    "stage-2",
+    "react"
+  ],
+  "plugins": [
+    "transform-flow-strip-types"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["import-noop", {
+          "extensions": ["scss", "css"]
+        }]
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin backgroundImage($image) {
+	$path: './../img/#{$image}';
+	background-image: url($path);
+	background-repeat: no-repeat;
+}
+
+@mixin clear() {
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin  overflow($x: hidden, $y: $x) {
+	overflow-x: $x;
+	overflow-y: $y;
+	&::-webkit-scrollbar {
+		display: none;
+	};
+}
+
+@mixin rotate($angle) {
+	-webkit-transform: rotate($angle);
+	-moz-transform: rotate($angle);
+	-o-transform: rotate($angle);
+	transform: rotate($angle);
+}
+
+@mixin translate($x: 0, $y: 0, $z: 0) {
+	-webkit-transform: translate3d($x, $y, $z);
+	-moz-transform: translate3d($x, $y, $z);
+	-o-transform: translate3d($x, $y, $z);
+	transform: translate3d($x, $y, $z);
+}
+
+@mixin transition($time, $function: 'linear') {
+	-webkit-transition: $time $function;
+	-moz-transition: $time $function;
+	-o-transition: $time $function;
+	transition: $time $function;
+}

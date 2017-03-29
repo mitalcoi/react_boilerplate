@@ -1,0 +1,14 @@
+[include]
+./src
+[ignore]
+<PROJECT_ROOT>/node_modules/radium/.*
+<PROJECT_ROOT>/node_modules/.*/test/
+<PROJECT_ROOT>/node_modules/fbjs/.*
+.*babylon
+.*babel
+
+[libs]
+[options]
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable

@@ -1,0 +1,42 @@
+@import "./config";
+@import "./mixins";
+
+body {
+    position: relative;
+    color: $dark;
+    font-family: sans-serif;
+
+    p {
+        margin: 0;
+    }
+}
+
+//LIBS
+@import "~@blueprintjs/core/dist/blueprint.css";
+// @import "~@blueprintjs/datetime/dist/blueprint-datetime.css";
+@import "~font-awesome/css/font-awesome.css";
+// @import "~flexboxgrid/css/flexboxgrid.min.css";
+// @import "~react-select-plus/dist/react-select-plus.css";
+
+// //BASE
+// @import "base/header";
+// @import "./base/sidebar";
+
+// //CONTAINERS
+// @import "./containers/right-panel";
+// @import "./containers/modal";
+
+//COMPONENTS
+@import "./components/form";
+// @import "./components/audio-player";
+// @import "./components/react-rater";
+// @import "./components/summaries";
+
+// //CONTENT
+// @import "./content/login";
+// @import "./content/dashboard";
+// @import "./content/statistics";
+// @import "./content/report-builder";
+
+//LOGIN
+@import "./login";
