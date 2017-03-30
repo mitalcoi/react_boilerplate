@@ -1,0 +1,137 @@
+.header {
+	float: left;
+	width: 100%;
+	padding: $base-offset - 2 $base-offset * 1.5;
+	background-color: #fff;
+	margin-bottom: $base-offset;
+
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+
+	@include clear();
+
+	&-title {
+		float: left;
+
+		font-family: Rubik-Regular, 'sans-serif';
+		font-size: 24px;
+		line-height: $icon-size + 4;
+
+		margin: 0;
+	}
+
+	&-right {
+		float: right;
+		margin: 0 (-$base-offset / 2);
+
+		& > * {
+			float: left;
+			margin: 0 $base-offset / 2;
+		}
+
+		& .roundButton {
+			font-size: 10px;
+			line-height: $icon-size + 4;
+			height: $icon-size + 4;
+		}
+
+		& .extension {
+			$indicator-size: 22px;
+
+			position: relative;
+			padding: 0 ($indicator-size + $base-offset) 0 0;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 0;
+
+				width: $indicator-size;
+				height: $indicator-size;
+				margin-top: -$indicator-size / 2;
+
+				border-radius: 100%;
+
+				background-color: $grey;
+			}
+
+			&.active {
+				&::before {
+					background-color: $green;
+				}
+			}
+
+			& .ls-select {
+				margin-bottom: 0;
+				& .Select {
+					border-radius: 20px;
+					height: $icon-size + 4;
+					box-shadow: 0 0 0 1px #E3E3E3;
+					& .Select-control {
+						height: $icon-size + 4;
+						border-radius: 20px;
+						border: none;
+					}
+					& .Select-value {
+						font-size: 14px;
+						line-height: $icon-size + 4;
+					}
+					& .Select-placeholder {
+						font-size: 14px;
+						line-height: $icon-size + 4;
+					}
+					& .Select-input {
+						height: $icon-size + 4;
+						input {
+							font-size: 14px;
+							line-height: $icon-size + 4;
+						}
+					}
+				}
+			}
+		}
+
+		& .user {
+
+			p {
+				margin: 0;
+			}
+
+			padding: 0 0 0 $icon-size + $base-offset;
+			position: relative;
+
+			&-avatar {
+
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				&::before {
+					content: '\f2be';
+					color: $darker-grey;
+					font-family: FontAwesome, 'sans-serif';
+					font-size: $icon-size + 4;
+					line-height: $icon-size + 4;
+					width: $icon-size + 4;
+					height: $icon-size + 4;
+					text-align: center;
+				}
+			}
+
+			&-info {
+				font-family: Rubik-Medium, sans-serif;
+				font-size: 14px;
+				color: $dark;
+                height: $icon-size + 4;
+				line-height: $icon-size / 2 + 2;
+				a {
+					font-family: Roboto-Regular, sans-serif;
+					font-size: 12px;
+					color: $darker-grey;
+				}
+			}
+		}
+
+	}
+}

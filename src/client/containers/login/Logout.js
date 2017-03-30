@@ -9,7 +9,6 @@ class Logout extends React.Component {
     componentDidMount() {
         let logoutLocation: History$Location;
         if (this.props.location.query.json) {
-            console.log('json', JSON.parse(this.props.location.query.json));
             logoutLocation = JSON.parse(this.props.location.query.json);
         } else {
             logoutLocation = {
@@ -17,7 +16,6 @@ class Logout extends React.Component {
                 query: {}
             }
         }
-        console.log('logout location', logoutLocation);
         this.props.dispatch(logout(logoutLocation));
     }
 

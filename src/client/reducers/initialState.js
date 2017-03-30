@@ -10,6 +10,12 @@ const InitialState: State = {
             expired: {}
         }
     },
+    ui: {
+        appIsFetch: false,
+        menu: {
+            isOpen: false
+        }
+    },
     form: {},
     routing: {
         locationBeforeTransitions: {

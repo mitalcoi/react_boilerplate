@@ -1,0 +1,21 @@
+.base-layout {
+    & .main-wrap {
+        @include overflow();
+        height: 100vh;
+
+        & .content-container {
+            @include overflow();
+            padding: 0 $base-offset $icon-size + $base-offset * 3;
+            height: 100%;
+        }
+
+        & .right-panel {
+            float: right;
+            height: 100%;
+            width: 260px;
+            margin-right: $base-offset;
+            padding-bottom: $icon-size + $base-offset * 3;
+            background-color: #fff;
+        }
+    }
+}

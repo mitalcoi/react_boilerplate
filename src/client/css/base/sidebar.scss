@@ -1,0 +1,80 @@
+.sidebar {
+	$full-width: 230px;
+
+	background-color: $dark;
+	float: left;
+	height: 100vh;
+	transition: .3s;
+
+	@include overflow();
+
+	&.full {
+		transition: .3s;
+		width: $full-width;
+	}
+
+	&.short {
+		transition: .3s;
+		width: 60px;
+	}
+
+	&-top {
+		background-color: darken($dark, 5);
+
+		&-logo {
+			float: left;
+			margin-left: $base-offset + 2px;
+			height: $icon-size;
+			width: $full-width - (($base-offset + 2) * 3 + $icon-size);
+
+			color: #fff;
+			text-transform: uppercase;
+			line-height: $icon-size;
+
+			// @include backgroundImage('logo.png');
+			// background-size: auto 80%;
+			// background-position: center left;
+		}
+	}
+
+	&-item, &-top {
+		display: block;
+		padding: $base-offset $base-offset + 2px;
+		min-width: 230px;
+		@include clear();
+
+		& .fa {
+			float: left;
+			font-size: 24px;
+			width: $icon-size;
+			height: $icon-size;
+			color: $grey;
+			text-align: center;
+		}
+
+		&-label {
+			font-family: Rubik-Medium, 'sans-serif';
+			text-transform: capitalize;
+			font-size: 14px;
+			line-height: $icon-size;
+			height: $icon-size;
+			color: #fff;
+			display: inline-block;
+
+			margin-left: $base-offset + 2px;
+		}
+
+		&:hover {
+			transition: .5s;
+			background-color: rgba($blue, .3);
+		}
+
+		&.active {
+			transition: .3s;
+			background-color: $blue;
+			& .fa {
+				color: #fff;
+			}
+		}
+	}
+}

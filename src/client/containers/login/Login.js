@@ -35,9 +35,7 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state: State) => {
-    return {
-
-    }
+    return {}
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {

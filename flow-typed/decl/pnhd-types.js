@@ -9,7 +9,9 @@ import type {
 
 declare module 'pnhd-types' {
 
+    /**ACTIONS*/
     declare type Action = 
+    {type: 'UI_MENU_TOGGLE'}|
     {type: 'USER_LOGIN_SUCCESS', payload: { token: string, data: Object} }|
     {type: 'USER_LOGOUT', location: History$Location}|
     // {type: 'raw/FORM_FACTORY_API', url: string, form: string, data: Object}|
@@ -34,6 +36,10 @@ declare module 'pnhd-types' {
         meta: {touched: boolean, error: string}
     }
 
+    declare type Props$Header = {
+        moduleName: string
+    }
+
     /**STATE*/
     declare type State$UserCredentials = {
         token: string,
@@ -43,12 +49,20 @@ declare module 'pnhd-types' {
             expired: Object,
         }
     }
+
+    declare type State$Ui = {
+        appIsFetch: boolean,
+        menu: {
+            isOpen: boolean
+        }
+    }
     
     /**GRID*/
     
     /*********/
     declare type State = {
         userCredentials: State$UserCredentials,
+        ui: State$Ui,
         form: Object,
         routing: {
             locationBeforeTransitions: {
