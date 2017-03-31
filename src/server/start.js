@@ -62,6 +62,6 @@ app.listen(3000, function (err) {
         return console.error(err);
     }
 
-    console.info('----\n==> ✅  LHD is running [%s]', env);
+    console.info('----\n==> ✅  PNHD is running [%s]', env);
     console.info('==> 💻  Open %s:%s in a browser to view the app.', process.env.HOSTNAME, 3000);
 });
