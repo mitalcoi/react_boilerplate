@@ -11,7 +11,7 @@ services:
     depends_on:
       - web
     ports:
-      - "80:80"
+      - "${PORT}:80"
     volumes:
       - ./docker/nginx/default.conf.template:/etc/nginx/default.conf.template
-    command: /bin/bash -c "envsubst '$$API_ENDPOINT $$HOSTNAME' < /etc/nginx/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    command: /bin/bash -c "envsubst '$$API_ENDPOINT $$HOSTNAME $$PORT' < /etc/nginx/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
