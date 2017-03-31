@@ -1,0 +1,17 @@
+version: '2'
+services:
+  web:
+    env_file: .env
+    build: .
+    volumes:
+      - "./:/usr/src/app"
+  nginx:
+    env_file: .env
+    image: nginx:1.11
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/default.conf.template:/etc/nginx/default.conf.template
+    command: /bin/bash -c "envsubst '$$API_ENDPOINT $$HOSTNAME' < /etc/nginx/default.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"

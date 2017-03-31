@@ -1,10 +1,9 @@
-const config = require('./config.json');
 const path = require('path');
 const express = require('express');
 const fs = require('fs');
 
 const app = express();
-const env = config.env;
+const env = process.env.APP_ENV;
 const isProd = env == 'production';
 
 if (!isProd) {
@@ -57,12 +56,12 @@ function renderFullPage() {
     `
 }
 
-app.listen(config.app_port, function (err) {
+app.listen(3000, function (err) {
     if (err) {
-        console.log('port', config.app_port);
+        console.log('port', 3000);
         return console.error(err);
     }
 
-    console.info('----\n==> ✅  %s is running [%s]', config.title, env);
-    console.info('==> 💻  Open %s:%s in a browser to view the app.', 'localhost', config.app_port);
+    console.info('----\n==> ✅  LHD is running [%s]', env);
+    console.info('==> 💻  Open %s:%s in a browser to view the app.', process.env.HOSTNAME, 3000);
 });

@@ -33,7 +33,7 @@ export default function configureStore(initialState: Object): Store {
 
     let composeEnhancers = compose;
 
-    if (process.env.NODE_ENV !== 'production' && window.__REDUX_DEVTOOLS_EXTENSION__) {
+    if (process.env.APP_ENV !== 'prod' && window.__REDUX_DEVTOOLS_EXTENSION__) {
         composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     }
 
