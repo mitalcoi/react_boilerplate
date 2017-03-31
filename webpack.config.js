@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const config = require('./src/server/config.json');
-const isProd = config.env == 'production';
+const isProd = process.env.APP_ENV == 'prod';
 
 let loaders = [
     {
@@ -32,13 +31,6 @@ let entry = {
 };
 
 let plugins = [
-    new webpack.DefinePlugin({
-        'process.env': {
-            NODE_ENV: JSON.stringify(config.env),
-            SOCKET_HOST: JSON.stringify(config.socket_host),
-            SENTRY_DSN: JSON.stringify(config.raven_dsn)
-        }
-    }),
     new webpack.optimize.CommonsChunkPlugin('vendor',
          'vendor.js'),
 ];

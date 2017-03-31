@@ -4,3 +4,6 @@ npm-debug.log
 src/server/config.json
 src/server/dist
 .idea
+*~
+!.env.dist
+.env
